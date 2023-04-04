@@ -1,15 +1,15 @@
 pipeline {
-environment {
-
-  PATH = "C:\\WINDOWS\\SYSTEM32"
   agent any
-  stages{
-       stage('Build') {
+  stages {
+    stage('version') {
       steps {
-        bat 'python PyTrial.py'
-        }
+        bat 'python3 --version'
+      }
+    }
+    stage('hello') {
+      steps {
+        bat 'python3 hello.py'
       }
     }
   }
 }
-
