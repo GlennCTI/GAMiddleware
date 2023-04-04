@@ -1,9 +1,10 @@
 pipeline {
   agent any
-    stage('Build') {
+  stages{
+       stage('Build') {
       steps {
         bat 'python PyTrial.py'
       }
     }
   }
-
+}
